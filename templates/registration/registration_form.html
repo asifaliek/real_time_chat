@@ -1,0 +1,38 @@
+{% extends 'registration/registration_base.html' %}
+{% load static crispy_forms_tags %}
+{% block content %}
+<div class="container mt-5" id="kt_content_container">
+    <div class="card mb-5 mb-xl-10" id="kt_profile_details_view">
+        <div class="card-header cursor-pointer">
+            <div class="card-title m-0">
+                <h3 class="fw-bolder m-0">Register to LetsChat</h3>
+            </div>
+        </div>
+        <div class="card-body p-9">
+            <form action="{% url 'registrer_user' %}" method="post">
+                {% csrf_token %}
+                {{form|crispy}}
+                <div class="">
+                    <button type="submit" id="kt_sign_in_submit" class="btn btn-lg btn-primary mb-5">Continue</button>
+                </div>
+            </form>
+        </div>
+        <!--end::Card body-->
+        <div class="text-center">
+            <p style="font-size: 19px;">Already have an account <a href="{% url 'login' %}"> Click here.</a></p>
+        </div>
+    </div>
+    <!--end::details View-->
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+    function alertUser() {
+        alert("This feature is not available now");
+    }
+</script>
+{% endblock %}
+
+

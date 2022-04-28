@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <meta charset="utf-8" />
+        <title>My chat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <!-- App css -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body class="account-body accountbg">
+        
+        {% block content%} {% endblock %}
+
+
+        <!-- jQuery  -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    </body>
+
+</html>

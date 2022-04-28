@@ -1,0 +1,16 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Logged out" %}{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1>Successfully logged out</h1>
+    <a href="{% url 'auth_login' %}" id="kt_sign_in_submit" class="btn btn-lg btn-primary mt-5">
+            <span class="indicator-label">Login Again</span>
+            <span class="indicator-progress">Please wait...
+                <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+        </a>
+</div>
+
+{% endblock %}
